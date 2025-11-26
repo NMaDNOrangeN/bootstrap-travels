@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Travels – Главная</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <style>
+      .hero-section {
+        position: relative;
+        height: 70vh;
+        min-height: 500px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        color: #0d6efd;
+      }
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("images/travels-background.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: -2;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 1;
+      }
+      .logo img {
+        height: 40px;
+      }
+      .section-padding {
+        padding: 60px 0;
+      }
+      .country-card,
+      .review-card {
+        transition: transform 0.3s ease;
+      }
+      .country-card:hover,
+      .review-card:hover {
+        transform: translateY(-5px);
+      }
+      .footer {
+        background-color: #f8f9fa;
+        padding: 40px 0;
+        margin-top: 50px;
+      }
+      .flight-icon {
+        font-size: 2rem;
+        color: #0d6efd;
+        margin-bottom: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="images/travels-logo.png" alt="Travels Logo" height="75" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="main-page.html">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="transfers.html">Трансферы</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Поиск..."
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-primary" type="submit">
+              <img src="images/travels-search.png" alt="Search" height="50" />
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero-section text-center">
+      <div class="container">
+        <h1 class="display-4 fw-bold mb-4">
+          Travels – Ваш лучший выбор для быстрых путешествий
+        </h1>
+        <a href="transfers.html" class="btn btn-primary btn-lg"
+          >Найти трансфер</a
+        >
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container">
+        <h2 class="text-center mb-5">
+          Список стран, в которые осуществляются перелёты
+        </h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card country-card h-100">
+              <div class="card-body text-center">
+                <div class="flight-icon">🇷🇺</div>
+                <h5 class="card-title">Россия</h5>
+                <p class="card-text">
+                  <strong>45 городов</strong><br />
+                  Ежедневные рейсы в Москву, СПб, Сочи<br />
+                  <small class="text-muted">Время полёта: 1-9 часов</small>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card country-card h-100">
+              <div class="card-body text-center">
+                <div class="flight-icon">🇧🇾</div>
+                <h5 class="card-title">Беларусь</h5>
+                <p class="card-text">
+                  <strong>Прямые рейсы в Минск</strong><br />
+                  3 раза в день<br />
+                  <small class="text-muted">Безвизовый режим · 1.5 часа</small>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card country-card h-100">
+              <div class="card-body text-center">
+                <div class="flight-icon">🇦🇲</div>
+                <h5 class="card-title">Армения</h5>
+                <p class="card-text">
+                  <strong>Ежедневные рейсы</strong><br />
+                  Ереван, горные курорты<br />
+                  <small class="text-muted">3 часа полёта</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card country-card h-100">
+              <div class="card-body text-center">
+                <div class="flight-icon">🇹🇷</div>
+                <h5 class="card-title">Турция</h5>
+                <p class="card-text">
+                  <strong>Стамбул, Анталья, Измир</strong><br />
+                  Чартерные программы<br />
+                  <small class="text-muted">2.5-4 часа · Круглогодично</small>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card country-card h-100">
+              <div class="card-body text-center">
+                <div class="flight-icon">🇰🇿</div>
+                <h5 class="card-title">Казахстан</h5>
+                <p class="card-text">
+                  <strong>Нур-Султан, Алматы</strong><br />
+                  Деловые и туристические направления<br />
+                  <small class="text-muted"
+                    >3-4 часа · Упрощённый визовый режим</small
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card country-card h-100">
+              <div class="card-body text-center">
+                <div class="flight-icon">🇦🇪</div>
+                <h5 class="card-title">ОАЭ</h5>
+                <p class="card-text">
+                  <strong>Дубай, Абу-Даби</strong><br />
+                  Премиум-класс обслуживания<br />
+                  <small class="text-muted">5 часов · Шопинг-туры</small>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Наиболее популярные маршруты</h2>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Москва (SVO) → Ереван (EVN)</h5>
+                <p class="card-text">
+                  <strong>Авиакомпании:</strong> Аэрофлот, ЮТэйр, Red Wings<br />
+                  <strong>Частота:</strong> 5-7 рейсов ежедневно<br />
+                  <strong>Особенности:</strong> короткий перелёт, красивые виды
+                  на горы
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h6 text-primary">12,000 - 18,000 ₽</span>
+                  <span class="badge bg-success">Популярно</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">
+                  Санкт-Петербург (LED) → Стамбул (IST)
+                </h5>
+                <p class="card-text">
+                  <strong>Авиакомпании:</strong> Turkish Airlines, S7
+                  Airlines<br />
+                  <strong>Частота:</strong> 3-4 рейса в день<br />
+                  <strong>Особенности:</strong> стыковка для рейсов в Европу
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h6 text-primary">15,000 - 22,000 ₽</span>
+                  <span class="badge bg-success">Популярно</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Москва (DME) → Минск (MSQ)</h5>
+                <p class="card-text">
+                  <strong>Авиакомпании:</strong> Белавиа, Аэрофлот<br />
+                  <strong>Частота:</strong> 8-10 рейсов ежедневно<br />
+                  <strong>Особенности:</strong> быстрый перелёт, деловые поездки
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h6 text-primary">8,000 - 12,000 ₽</span>
+                  <span class="badge bg-success">Популярно</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Екатеринбург (SVX) → Анталья (AYT)</h5>
+                <p class="card-text">
+                  <strong>Авиакомпании:</strong> Azur Air, Nordwind<br />
+                  <strong>Частота:</strong> сезонные рейсы (апрель-октябрь)<br />
+                  <strong>Особенности:</strong> прямые чартерные рейсы
+                </p>
+                <div class="d-flex justify-content-between align-items-center">
+                  <span class="h6 text-primary">20,000 - 30,000 ₽</span>
+                  <span class="badge bg-success">Популярно</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding">
+      <div class="container">
+        <h2 class="text-center mb-5">Отзывы клиентов</h2>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card review-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Иванов И.И.</h5>
+                <div class="mb-2">
+                  <span class="text-warning">★★★★★</span>
+                  <small class="text-muted">Бизнес-класс</small>
+                </div>
+                <p class="card-text">
+                  "Пользовался услугой бронирования бизнес-класса в Дубай.
+                  Отличный сервис! Персональный менеджер помог подобрать
+                  оптимальный рейс. В самолёте - комфортные кресла, вкусное
+                  питание."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card review-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Сидоров В.В.</h5>
+                <div class="mb-2">
+                  <span class="text-warning">★★★★★</span>
+                  <small class="text-muted">Семейный перелёт</small>
+                </div>
+                <p class="card-text">
+                  "Летали семьёй в Анталию. Сайт удобный, быстро нашли
+                  подходящие билеты на четверых. Дети были в восторге от
+                  развлечений на борту. Обязательно воспользуемся снова!"
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="card review-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Романов Д.Д.</h5>
+                <div class="mb-2">
+                  <span class="text-warning">★★★★☆</span>
+                  <small class="text-muted">Деловая поездка</small>
+                </div>
+                <p class="card-text">
+                  "Регулярно летаю в Минск по работе. Сервис стабильно хороший,
+                  рейсы практически никогда не задерживаются. Нравится система
+                  накопления миль - уже получил бесплатный upgrade."
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-4">
+            <div class="card review-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Петрова А.С.</h5>
+                <div class="mb-2">
+                  <span class="text-warning">★★★★★</span>
+                  <small class="text-muted">Туристическая поездка</small>
+                </div>
+                <p class="card-text">
+                  "Первый раз летела в Ереван. Очень переживала, но всё прошло
+                  прекрасно! Менеджеры подробно объяснили все нюансы перелёта. В
+                  самолёте чисто, комфортно, питание достойное."
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4">
+            <div class="card review-card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Козлов М.П.</h5>
+                <div class="mb-2">
+                  <span class="text-warning">★★★★★</span>
+                  <small class="text-muted">Групповой заказ</small>
+                </div>
+                <p class="card-text">
+                  "Организовывал перелёт для группы из 15 человек в Стамбул.
+                  Специалисты Travels предложили выгодный групповой тариф. Все
+                  документы оформили оперативно. Профессиональная работа!"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h5>О нашей компании</h5>
+            <p>
+              Наша компания помогает Вам выбрать наиболее выгодный и удобный
+              маршрут в нужную Вам страну!
+            </p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5>Ссылки</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="main-page.html" class="text-decoration-none"
+                  >Главная</a
+                >
+              </li>
+              <li>
+                <a href="transfers.html" class="text-decoration-none"
+                  >Трансферы</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5>Наши контакты</h5>
+            <ul class="list-unstyled">
+              <li>info@email.com</li>
+              <li>+79123456789</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap-bundle.js"></script>
+  </body>
+</html>

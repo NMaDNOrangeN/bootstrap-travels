@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Travels – Трансферы</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <style>
+      .logo img {
+        height: 40px;
+      }
+      .transfer-card {
+        transition: transform 0.3s ease;
+        margin-bottom: 20px;
+      }
+      .transfer-card:hover {
+        transform: translateY(-5px);
+      }
+      .search-section {
+        background-color: #f8f9fa;
+        padding: 50px 0;
+        margin-bottom: 50px;
+      }
+      .footer {
+        background-color: #f8f9fa;
+        padding: 40px 0;
+        margin-top: 50px;
+      }
+      .airline-logo {
+        width: 40px;
+        height: 40px;
+        background: #0d6efd;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        margin-right: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="images/travels-logo.png" alt="Travels Logo" height="75" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="main-page.html">Главная</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="transfers.html">Трансферы</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Поиск..."
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-primary" type="submit">
+              <img src="images/travels-search.png" alt="Search" height="50" />
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <section class="search-section">
+      <div class="container">
+        <h1 class="text-center mb-4">Найдите идеальный трансфер</h1>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="card">
+              <div class="card-body">
+                <form>
+                  <div class="row g-3">
+                    <div class="col-md-6">
+                      <label for="from" class="form-label">Откуда</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="from"
+                        placeholder="Город выезда"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="to" class="form-label">Куда</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="to"
+                        placeholder="Город назначения"
+                      />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="date" class="form-label">Дата</label>
+                      <input type="date" class="form-control" id="date" />
+                    </div>
+                    <div class="col-md-6">
+                      <label for="passengers" class="form-label"
+                        >Пассажиры</label
+                      >
+                      <select class="form-select" id="passengers">
+                        <option value="1">1 пассажир</option>
+                        <option value="2">2 пассажира</option>
+                        <option value="3">3 пассажира</option>
+                        <option value="4">4 пассажира</option>
+                      </select>
+                    </div>
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-primary w-100">
+                        Найти трансферы
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mb-5">
+      <h2 class="text-center mb-5">Доступные рейсы</h2>
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <div class="card transfer-card">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="airline-logo">SU</div>
+                <div>
+                  <h5 class="card-title mb-0">Москва (SVO) → Ереван (EVN)</h5>
+                  <small class="text-muted"
+                    >Аэрофлот · Рейс SU-1860 · Airbus A320</small
+                  >
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>19:00</strong>
+                  <br />
+                  <small>Москва</small>
+                </div>
+                <div class="col-4 text-center">
+                  <span class="flight-icon">✈️</span>
+                  <br />
+                  <small>3ч 10м</small>
+                </div>
+                <div class="col-4 text-end">
+                  <strong>22:10</strong>
+                  <br />
+                  <small>Ереван</small>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="h5 text-primary mb-0">12 500 ₽</span>
+                  <small class="text-muted d-block">Эконом класс</small>
+                </div>
+                <button class="btn btn-primary">Забронировать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mb-4">
+          <div class="card transfer-card">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="airline-logo">S7</div>
+                <div>
+                  <h5 class="card-title mb-0">
+                    Санкт-Петербург (LED) → Стамбул (IST)
+                  </h5>
+                  <small class="text-muted"
+                    >S7 Airlines · Рейс S7-2451 · Boeing 737-800</small
+                  >
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>14:30</strong>
+                  <br />
+                  <small>СПб</small>
+                </div>
+                <div class="col-4 text-center">
+                  <span class="flight-icon">✈️</span>
+                  <br />
+                  <small>4ч 20м</small>
+                </div>
+                <div class="col-4 text-end">
+                  <strong>16:50</strong>
+                  <br />
+                  <small>Стамбул</small>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="h5 text-primary mb-0">15 800 ₽</span>
+                  <small class="text-muted d-block">Эконом класс</small>
+                </div>
+                <button class="btn btn-primary">Забронировать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mb-4">
+          <div class="card transfer-card">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="airline-logo">UT</div>
+                <div>
+                  <h5 class="card-title mb-0">Москва (DME) → Минск (MSQ)</h5>
+                  <small class="text-muted"
+                    >UTair · Рейс UT-371 · Boeing 737-500</small
+                  >
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>08:15</strong>
+                  <br />
+                  <small>Москва</small>
+                </div>
+                <div class="col-4 text-center">
+                  <span class="flight-icon">✈️</span>
+                  <br />
+                  <small>1ч 45м</small>
+                </div>
+                <div class="col-4 text-end">
+                  <strong>09:00</strong>
+                  <br />
+                  <small>Минск</small>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="h5 text-primary mb-0">8 200 ₽</span>
+                  <small class="text-muted d-block">Эконом класс</small>
+                </div>
+                <button class="btn btn-primary">Забронировать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mb-4">
+          <div class="card transfer-card">
+            <div class="card-body">
+              <div class="d-flex align-items-center mb-3">
+                <div class="airline-logo">B2</div>
+                <div>
+                  <h5 class="card-title mb-0">
+                    Москва (VKO) → Нур-Султан (NQZ)
+                  </h5>
+                  <small class="text-muted"
+                    >Белавиа · Рейс B2-881 · Embraer 195</small
+                  >
+                </div>
+              </div>
+              <div class="row mb-3">
+                <div class="col-4">
+                  <strong>11:20</strong>
+                  <br />
+                  <small>Москва</small>
+                </div>
+                <div class="col-4 text-center">
+                  <span class="flight-icon">✈️</span>
+                  <br />
+                  <small>4ч 20м</small>
+                </div>
+                <div class="col-4 text-end">
+                  <strong>15:40</strong>
+                  <br />
+                  <small>Нур-Султан</small>
+                </div>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <span class="h5 text-primary mb-0">14 300 ₽</span>
+                  <small class="text-muted d-block">Эконом класс</small>
+                </div>
+                <button class="btn btn-primary">Забронировать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-light py-5">
+      <div class="container">
+        <h2 class="text-center mb-5">Классы обслуживания</h2>
+        <div class="row">
+          <div class="col-md-4 text-center mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Эконом класс</h5>
+                <p class="card-text">Комфортные места по доступной цене</p>
+                <span class="badge bg-success">От 5 000 ₽</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 text-center mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Комфорт класс</h5>
+                <p class="card-text">Улучшенные условия и сервис</p>
+                <span class="badge bg-success">От 10 000 ₽</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 text-center mb-4">
+            <div class="card h-100">
+              <div class="card-body">
+                <h5 class="card-title">Бизнес класс</h5>
+                <p class="card-text">Максимальный комфорт и привилегии</p>
+                <span class="badge bg-success">От 20 000 ₽</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h5>О нашей компании</h5>
+            <p>
+              Наша компания помогает Вам выбрать наиболее выгодный и удобный
+              маршрут в нужную Вам страну!
+            </p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5>Ссылки</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="main-page.html" class="text-decoration-none"
+                  >Главная</a
+                >
+              </li>
+              <li>
+                <a href="transfers.html" class="text-decoration-none"
+                  >Трансферы</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5>Наши контакты</h5>
+            <ul class="list-unstyled">
+              <li>info@email.com</li>
+              <li>+79123456789</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/bootstrap-bundle.js"></script>
+  </body>
+</html>
